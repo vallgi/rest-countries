@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         countries.forEach(country => {
             const countryElement = document.createElement('div');
             countryElement.className = 'country';
+            console.log(country)
             countryElement.innerHTML = `
                 <img src="${country.flags.png}" alt="Flag of ${country.name.common}">
-                <h2>${country.name.common}</h2>
+                <h2>${country.name}</h2>
                 <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
                 <p><strong>Region:</strong> ${country.region}</p>
                 <p><strong>Capital:</strong> ${country.capital}</p>
