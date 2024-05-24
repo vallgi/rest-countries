@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.search-filter input, .search-filter select {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.country {
+    background-color: blue;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.country:hover {
+    transform: translateY(-10px);
+}
+
+.country img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.country h2 {
+    margin: 10px 0;
+}
+
+.country p {
+    margin: 5px 0;
+}
+
+.country-details {
+    padding: 20px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fafafa;
+}
+
+.dark-mode .header {
+    background-color: #444;
+}
+
+.dark-mode .country {
+    background-color: #444;
+    color: #fafafa;
+}
+
+.dark-mode .country-details {
+    background-color: #444;
+    color: #fafafa;
+}
+
+.dark-mode .search-filter input, .dark-mode .search-filter select {
+    background-color: #555;
+    color: #fafafa;
+    border: none;
+}
